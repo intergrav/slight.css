@@ -17,7 +17,9 @@
 	},
 	"license": "MIT",
 	"author": "intergrav <intergrav@proton.me> (https://devins.page)",
-	"files": [],
+	"files": [
+		"slight.css"
+	],
 	"main": "slight.css",
 	"repository": "github:intergrav/slight.css",
 	"prettier": {
