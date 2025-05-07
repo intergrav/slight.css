@@ -1,0 +1,26 @@
+{
+	"name": "@intergrav/slight.css",
+	"version": "1.0.0",
+	"description": "minimal enhancements for the user agent stylesheet",
+	"keywords": [
+		"css",
+		"stylesheet",
+		"framework",
+		"classless",
+		"minimal",
+		"lightweight",
+		"open-source"
+	],
+	"homepage": "https://slightcss.devins.page",
+	"bugs": {
+		"url": "https://github.com/intergrav/slight.css/issues"
+	},
+	"license": "MIT",
+	"author": "intergrav <intergrav@proton.me> (https://devins.page)",
+	"files": [],
+	"main": "slight.css",
+	"repository": "github:intergrav/slight.css",
+	"prettier": {
+		"useTabs": true
+	}
+}

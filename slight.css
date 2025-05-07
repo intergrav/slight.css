@@ -1,0 +1,107 @@
+/* slight.css |
+  minimal enhancements on top of the user agent stylesheet
+  provides a pleasant reading experience while relying mostly on native browser styles
+  can be used as a baseline for web projects or minimal websites/blogs
+*/
+
+/* toc |
+  1. variables
+  2. typography
+  3. elements
+  4. remove max-width when printing
+*/
+
+/* 1. variables */
+
+:root {
+	/* customizable variables - you may change these as you wish */
+	--sc-font: system-ui, sans-serif;
+	--sc-font-mono: ui-monospace, "Cascadia Code", "Source Code Pro", Menlo,
+		Consolas, "DejaVu Sans Mono", monospace;
+	/* unsafe variables - not recommended to customize, may be removed or changed in the future */
+	color-scheme: light dark;
+	--sc-emphasizebd: light-dark(rgba(0, 0, 0, 0.2), rgba(255, 255, 255, 0.2));
+	--sc-emphasizebg: light-dark(rgba(0, 0, 0, 0.1), rgba(255, 255, 255, 0.1));
+}
+
+/* 2. typography */
+
+html {
+	font-family: var(--sc-font);
+	line-height: 1.5;
+	tab-size: 4;
+}
+
+body {
+	max-width: 48rem;
+	margin: auto;
+	padding: 1rem;
+}
+
+code,
+kbd,
+samp,
+pre {
+	font-family: var(--sc-font-mono);
+	font-size: 0.9rem;
+}
+
+/* 3. elements */
+
+table {
+	border-collapse: collapse;
+}
+
+th,
+td {
+	border: 1px solid var(--sc-emphasizebd);
+	padding: 0.25rem 0.5rem;
+}
+
+thead tr,
+tbody tr:nth-child(even) {
+	background-color: var(--sc-emphasizebg);
+}
+
+:not(pre) > code,
+:not(pre) > samp,
+:not(pre) > kbd,
+pre {
+	background-color: var(--sc-emphasizebg);
+}
+
+pre {
+	overflow-x: auto;
+	max-width: 100%;
+	padding: 0.5rem;
+}
+
+blockquote {
+	border-left: 4px solid var(--sc-emphasizebd);
+	padding-left: 1rem;
+	margin-left: 0;
+}
+
+header nav ul {
+	display: flex;
+	flex-wrap: wrap;
+	list-style: none;
+	padding: 0;
+}
+
+header nav ul li:not(:first-child)::before {
+	content: "•";
+	margin: 0 0.25em;
+}
+
+header nav ul li {
+	margin: 0;
+	display: flex;
+}
+
+/* 4. remove max-width when printing */
+@media print {
+	body {
+		max-width: revert;
+	}
+}
