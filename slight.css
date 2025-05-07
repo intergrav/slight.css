@@ -15,11 +15,11 @@
 
 :root {
 	/* customizable variables - you may change these as you wish */
+	color-scheme: light dark;
 	--sc-font: system-ui, sans-serif;
 	--sc-font-mono: ui-monospace, "Cascadia Code", "Source Code Pro", Menlo,
 		Consolas, "DejaVu Sans Mono", monospace;
 	/* unsafe variables - not recommended to customize, may be removed or changed in the future */
-	color-scheme: light dark;
 	--sc-emphasizebd: light-dark(rgba(0, 0, 0, 0.2), rgba(255, 255, 255, 0.2));
 	--sc-emphasizebg: light-dark(rgba(0, 0, 0, 0.1), rgba(255, 255, 255, 0.1));
 }
