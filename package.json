@@ -1,6 +1,6 @@
 {
 	"name": "@intergrav/slight.css",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "minimal enhancements for the user agent stylesheet",
 	"keywords": [
 		"css",
