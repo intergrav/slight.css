@@ -36,6 +36,7 @@ body {
 	max-width: 48rem;
 	margin: auto;
 	padding: 1rem;
+	padding-top: revert;
 }
 
 code,
