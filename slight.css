@@ -98,11 +98,11 @@ header nav ul li:not(:first-child)::before {
 }
 
 header nav ul li {
-	margin: 0;
 	display: flex;
 }
 
 /* 4. remove max-width when printing */
+
 @media print {
 	body {
 		max-width: revert;
