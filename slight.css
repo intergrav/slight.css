@@ -19,6 +19,8 @@
 	--sc-font: system-ui, sans-serif;
 	--sc-font-mono: ui-monospace, "Cascadia Code", "Source Code Pro", Menlo,
 		Consolas, "DejaVu Sans Mono", monospace;
+	--sc-body-max-width: 48rem; /* set to revert to remove limit */
+
 	/* unsafe variables - not recommended to customize, may be removed or changed in the future */
 	--sc-emphasizebd: light-dark(rgba(0, 0, 0, 0.2), rgba(255, 255, 255, 0.2));
 	--sc-emphasizebg: light-dark(rgba(0, 0, 0, 0.1), rgba(255, 255, 255, 0.1));
@@ -33,7 +35,7 @@ html {
 }
 
 body {
-	max-width: 48rem;
+	max-width: var(--sc-body-max-width);
 	margin: auto;
 	padding: 1rem;
 	padding-top: revert;
