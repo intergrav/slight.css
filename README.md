@@ -51,4 +51,4 @@ yes! there is a demo available at [slightcss.devins.page](https://slightcss.devi
 
 ## difference between this and dev.css?
 
-i maintain and use both, but this is a much more simple alternative to dev.css that mainly focuses on improving default user agent stylesheets rather than having a full custom set of styles. slight.css is more limited as it has less built-in element styles and doesn't have custom theme support (although you can apply your own stylesheets on top). it may also be less consistent across browsers.
+i maintain and use both, but this is a much more simple alternative to [dev.css](https://devcss.devins.page) that mainly focuses on improving default user agent stylesheets rather than having a full custom set of styles. slight.css is more limited as it has less built-in element styles and doesn't have custom theme support (although you can apply your own stylesheets on top). it may also be less consistent across browsers.
