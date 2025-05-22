@@ -17,8 +17,9 @@
 	/* customizable variables - you may change these as you wish */
 	color-scheme: light dark;
 	--sc-font: system-ui, sans-serif;
-	--sc-font-mono: ui-monospace, "Cascadia Code", "Source Code Pro", Menlo,
-		Consolas, "DejaVu Sans Mono", monospace;
+	--sc-font-mono:
+		ui-monospace, "Cascadia Code", "Source Code Pro", Menlo, Consolas,
+		"DejaVu Sans Mono", monospace;
 	--sc-body-max-width: 48rem; /* set to revert to remove limit */
 
 	/* unsafe variables - not recommended to customize, may be removed or changed in the future */
@@ -36,9 +37,10 @@ html {
 
 body {
 	max-width: var(--sc-body-max-width);
-	margin: auto;
-	padding: 1rem;
-	padding-top: revert;
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 1rem;
+	padding-right: 1rem;
 }
 
 code,
