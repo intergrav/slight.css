@@ -87,6 +87,7 @@ pre {
 
 blockquote {
 	border-left: 4px solid var(--sc-emphasizebd);
+	background-color: var(--sc-emphasizebg);
 	padding-left: 1rem;
 	margin-left: 0;
 }
