@@ -21,7 +21,7 @@
 		ui-monospace, "Cascadia Code", "Source Code Pro", Menlo, Consolas,
 		"DejaVu Sans Mono", monospace;
 	--sc-line-height: 1.5; /* set to 'revert' to use default */
-	--sc-body-max-width: 48rem; /* set to 'revert' to remove limit */
+	--sc-max-width: 48rem; /* set to 'revert' to remove limit */
 
 	/* unsafe variables - not recommended to customize, may be removed or changed in the future */
 	--sc-emphasizebd: light-dark(rgba(0, 0, 0, 0.2), rgba(255, 255, 255, 0.2));
