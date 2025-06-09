@@ -20,7 +20,8 @@
 	--sc-font-mono:
 		ui-monospace, "Cascadia Code", "Source Code Pro", Menlo, Consolas,
 		"DejaVu Sans Mono", monospace;
-	--sc-body-max-width: 48rem; /* set to revert to remove limit */
+	--sc-line-height: 1.5; /* set to 'revert' to use default */
+	--sc-body-max-width: 48rem; /* set to 'revert' to remove limit */
 
 	/* unsafe variables - not recommended to customize, may be removed or changed in the future */
 	--sc-emphasizebd: light-dark(rgba(0, 0, 0, 0.2), rgba(255, 255, 255, 0.2));
@@ -31,7 +32,7 @@
 
 html {
 	font-family: var(--sc-font);
-	line-height: 1.3;
+	line-height: var(--sc-line-height);
 	tab-size: 4;
 }
 
@@ -86,7 +87,7 @@ pre {
 }
 
 blockquote {
-	border-left: 4px solid var(--sc-emphasizebd);
+	border-left: 0.25rem solid var(--sc-emphasizebd);
 	background-color: var(--sc-emphasizebg);
 	padding-left: 1rem;
 	margin-left: 0;
@@ -108,7 +109,7 @@ footer nav ul li {
 header nav ul li:not(:first-child)::before,
 footer nav ul li:not(:first-child)::before {
 	content: "•";
-	margin: 0 0.25em;
+	margin: 0 0.25rem;
 }
 
 /* 4. remove max-width when printing */
