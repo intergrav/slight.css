@@ -91,6 +91,7 @@ blockquote {
 	background-color: var(--sc-emphasizebg);
 	padding-left: 1rem;
 	margin-left: 0;
+	margin-right: 0;
 }
 
 header nav ul,
