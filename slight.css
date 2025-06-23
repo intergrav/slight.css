@@ -24,8 +24,15 @@
 	--sc-max-width: 48rem; /* set to 'revert' to remove limit */
 
 	/* unsafe variables - not recommended to customize, may be removed or changed in the future */
-	--sc-emphasizebd: light-dark(rgba(0, 0, 0, 0.2), rgba(255, 255, 255, 0.2));
-	--sc-emphasizebg: light-dark(rgba(0, 0, 0, 0.1), rgba(255, 255, 255, 0.1));
+	--sc-emphasizebd: rgba(0, 0, 0, 0.2);
+	--sc-emphasizebg: rgba(0, 0, 0, 0.1);
+}
+
+@supports (color: light-dark(white, black)) {
+	:root {
+		--sc-emphasizebd: light-dark(rgba(0, 0, 0, 0.2), rgba(255, 255, 255, 0.2));
+		--sc-emphasizebg: light-dark(rgba(0, 0, 0, 0.1), rgba(255, 255, 255, 0.1));
+	}
 }
 
 /* 2. typography */
