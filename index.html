@@ -20,158 +20,161 @@
 		<header>
 			<h1>slight.css</h1>
 			<nav>
-				<ul>
-					<li>
-						<a href="https://npmjs.com/package/@intergrav/slight.css">npm</a>
-					</li>
-					<li>
-						<a href="https://github.com/intergrav/slight.css">git</a>
-					</li>
-					<li>
-						<a href="https://github.com/intergrav/slight.css/issues">issues</a>
-					</li>
-				</ul>
+				<a href="https://npmjs.com/package/@intergrav/slight.css">npm</a> /
+				<a href="https://github.com/intergrav/slight.css">git</a> /
+				<a href="https://github.com/intergrav/slight.css/issues">issues</a>
 			</nav>
 		</header>
-		<p>
-			<strong>slight.css</strong> is an incredibly simple CSS stylesheet that
-			adds some <em>slight</em> enhancements on top of the default user agent
-			stylesheet.
-		</p>
-		<p>
-			it aims to provide a more pleasant reading experience while relying mostly
-			on native browser styles. things such as background and text colors are
-			chosen by the browser.
-		</p>
-		<p>
-			this can be used as a good baseline for any web project, or as-is for a
-			super barebones website.
-		</p>
-		<p>
-			the page that you are currently viewing is using slight.css as its
-			stylesheet.
-		</p>
-		<h2>how do i use it?</h2>
-		<h3>html import</h3>
-		<p>place this somewhere in your <code>head</code>:</p>
-		<pre><code>&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@intergrav/slight.css@1"&gt;</code></pre>
-		<h3>css import</h3>
-		<p>place this somewhere in your stylesheet:</p>
-		<pre><code>@import url(https://cdn.jsdelivr.net/npm/@intergrav/slight.css@1);</code></pre>
-		<h3>npm package</h3>
-		<p>
-			run this in your terminal,
-			<strong>replacing with the proper command</strong>:
-		</p>
-		<pre><code>[npm/yarn/pnpm/bun] add @intergrav/slight.css</code></pre>
-		<h2>what exactly does it change?</h2>
-		<ol>
-			<li>
-				automatically adjusts the color scheme based on system preferences
-			</li>
-			<li>uses the default system sans-serif/monospace fonts</li>
-			<li>sets a maximum width for the body content on widescreen viewports</li>
-			<li>increases line height and changes tab size</li>
-			<li>
-				adds borders and padding to table elements for better spacing and
-				clarity
-			</li>
-			<li>
-				adds a border to inline code and code blocks for better readability
-			</li>
-			<li>makes blockquotes look a bit nicer with a border and padding</li>
-			<li>displays lists in nav horizontally when placed in header</li>
-		</ol>
-		<p>
-			keep in mind that this is not a CSS reset or normalization stylesheet. it
-			simply adds some better defaults with the aim of being as minimal as
-			possible. if you need a normalization stylesheet, i recommend using
-			<a href="https://github.com/sindresorhus/modern-normalize"
-				>modern-normalize</a
-			>.
-		</p>
-		<h2>demo elements</h2>
-		<h3>blockquote</h3>
-		<blockquote cite="https://example.com">
+		<main class="prose">
 			<p>
-				congue ex inceptos ut est gravida purus. convallis suspendisse mattis
-				porta metus mus nisl ad ante eros inceptos. iaculis convallis gravida
-				odio venenatis ut velit. fames non nunc sollicitudin dictumst litora
-				natoque consectetur erat. fermentum mattis arcu quam sociosqu libero
-				tincidunt pellentesque rutrum. pulvinar per habitasse fusce nec bibendum
-				tempor natoque efficitur si.
+				<strong>slight.css</strong> is an incredibly simple CSS stylesheet that
+				adds some <em>slight</em> enhancements on top of the default user agent
+				stylesheet.
 			</p>
-			<footer>— <cite>a really cool person</cite></footer>
-		</blockquote>
-		<blockquote>
-			<p>this is a blockquote without a citation.</p>
-			<blockquote>
-				<p>this is a nested blockquote.</p>
+			<p>
+				it aims to provide a more pleasant reading experience while relying
+				mostly on native browser styles. things such as background and text
+				colors are chosen by the browser.
+			</p>
+			<p>
+				this can be used as a good baseline for any web project, or as-is for a
+				super barebones website.
+			</p>
+			<p>
+				the page that you are currently viewing is using slight.css as its
+				stylesheet.
+			</p>
+			<h2>how do i use it?</h2>
+			<h3>html import</h3>
+			<p>place this somewhere in your <code>head</code>:</p>
+			<pre><code>&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@intergrav/slight.css@1"&gt;</code></pre>
+			<h3>css import</h3>
+			<p>place this somewhere in your stylesheet:</p>
+			<pre><code>@import url(https://cdn.jsdelivr.net/npm/@intergrav/slight.css@1);</code></pre>
+			<h3>npm package</h3>
+			<p>
+				run this in your terminal,
+				<strong>replacing with the proper command</strong>:
+			</p>
+			<pre><code>[npm/yarn/pnpm/bun] add @intergrav/slight.css</code></pre>
+			<h2>what exactly does it change?</h2>
+			<ol>
+				<li>
+					automatically adjusts the color scheme based on system preferences
+				</li>
+				<li>uses the default system sans-serif/monospace fonts</li>
+				<li>
+					sets a maximum width for the body content on widescreen viewports
+				</li>
+				<li>increases line height and changes tab size</li>
+				<li>
+					opt-in styles for elements in containers with
+					<code>prose</code> class:
+					<ol>
+						<li>sets 100% maximum width for images, videos, and iframes</li>
+						<li>
+							adds a background to inline code and code blocks for better
+							readability
+						</li>
+						<li>
+							adds borders and padding to table elements for better spacing and
+							clarity
+						</li>
+						<li>
+							makes blockquotes look a bit nicer with a border and padding
+						</li>
+					</ol>
+				</li>
+			</ol>
+			<p>
+				keep in mind that this is not a CSS reset or normalization stylesheet.
+				it simply adds some better defaults with the aim of being as minimal as
+				possible. if you need a normalization stylesheet, i recommend using
+				<a href="https://github.com/sindresorhus/modern-normalize"
+					>modern-normalize</a
+				>.
+			</p>
+			<h2>prose elements</h2>
+			<p>
+				slight.css offers built-in styles to beautify certain elements, such as
+				blockquotes, tables, code, pre, and more. these styles are
+				<strong>opt-in</strong>, and to use them, you have to apply the
+				<code>prose</code> class to a container that wraps your content, such as
+				a <code>body</code>, <code>main</code>, or <code>div</code>. you can see
+				the demo's
+				<a href="https://github.com/intergrav/slight.css/blob/main/index.html"
+					>index.html</a
+				>
+				for an example of it's usage.
+			</p>
+			<h3>blockquote</h3>
+			<blockquote cite="https://example.com">
+				<p>
+					congue ex inceptos ut est gravida purus. convallis suspendisse mattis
+					porta metus mus nisl ad ante eros inceptos. iaculis convallis gravida
+					odio venenatis ut velit. fames non nunc sollicitudin dictumst litora
+					natoque consectetur erat. fermentum mattis arcu quam sociosqu libero
+					tincidunt pellentesque rutrum. pulvinar per habitasse fusce nec
+					bibendum tempor natoque efficitur si.
+				</p>
+				<footer>— <cite>a really cool person</cite></footer>
 			</blockquote>
-		</blockquote>
-		<h3>table</h3>
-		<table>
-			<caption>
-				table caption
-			</caption>
-			<thead>
-				<tr>
-					<th>header 1</th>
-					<th>header 2</th>
-					<th>header 3</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr>
-					<td>row 1</td>
-					<td>row 1</td>
-					<td>row 1</td>
-				</tr>
-				<tr>
-					<td>row 2</td>
-					<td>row 2</td>
-					<td>row 2</td>
-				</tr>
-			</tbody>
-		</table>
-		<h3>code</h3>
-		<p>
-			this is normal text, while this is <code>inline code</code> marked with
-			code tag.
-		</p>
-		<h3>code block (pre+code)</h3>
-		<pre><code>this is a code block
+			<blockquote>
+				<p>this is a blockquote without a citation.</p>
+				<blockquote>
+					<p>this is a nested blockquote.</p>
+				</blockquote>
+			</blockquote>
+			<h3>table</h3>
+			<table>
+				<caption>
+					table caption
+				</caption>
+				<thead>
+					<tr>
+						<th>header 1</th>
+						<th>header 2</th>
+						<th>header 3</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>row 1</td>
+						<td>row 1</td>
+						<td>row 1</td>
+					</tr>
+					<tr>
+						<td>row 2</td>
+						<td>row 2</td>
+						<td>row 2</td>
+					</tr>
+				</tbody>
+			</table>
+			<h3>code</h3>
+			<p>
+				this is normal text, while this is <code>inline code</code> marked with
+				code tag.
+			</p>
+			<h3>code block (pre+code)</h3>
+			<pre><code>this is a code block
 	this is a line of code, indented with tab
 	this is another line of code, indented with tab
 beep boop</code></pre>
-		<h3>forms</h3>
-		<p>this form doesn't actually do anything its just a demo</p>
-		<form>
-			<label for="fname">first name</label><br />
-			<input type="text" id="fname" name="fname" /><br />
-			<label for="lname">last name</label><br />
-			<input type="text" id="lname" name="lname" /><br /><br />
-			<input type="radio" id="one" name="options" value="option 1" />
-			<label for="one">option 1</label><br />
-			<input type="radio" id="two" name="options" value="option 2" />
-			<label for="two">option 2</label><br />
-			<input type="radio" id="three" name="options" value="option 3" />
-			<label for="three">option 3</label><br /><br />
-			<input type="submit" value="submit" />
-		</form>
-		<h2>difference between this and dev.css?</h2>
-		<p>
-			i maintain and use both, but this is a much more simple alternative to
-			<a href="https://devcss.devins.page">dev.css</a> that mainly focuses on
-			improving default user agent stylesheets rather than having a full custom
-			set of styles. slight.css is more limited as it has less built-in element
-			styles and doesn't have custom theme support (although you can apply your
-			own stylesheets on top). it may also be less consistent across browsers.
-		</p>
-		<a href="https://devins.page"
-			><img
-				src="https://raw.githubusercontent.com/intergrav/branding/refs/heads/main/personal/badge.svg"
-		/></a>
+			<h2>difference between this and dev.css?</h2>
+			<p>
+				i maintain and use both, but this is a much more simple alternative to
+				<a href="https://devcss.devins.page">dev.css</a> that mainly focuses on
+				improving default user agent stylesheets rather than having a full
+				custom set of styles. it doesn't have custom theme support (although you
+				can apply your own stylesheets on top). it may also be less consistent
+				across browsers. another difference is that dev.css is classless, while
+				slight.css contains a <code>prose</code> class.
+			</p>
+			<a href="https://devins.page"
+				><img
+					src="https://raw.githubusercontent.com/intergrav/branding/refs/heads/main/personal/badge.svg"
+			/></a>
+		</main>
 		<footer>
 			<p>
 				slight.css and this website was written by

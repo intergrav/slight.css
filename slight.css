@@ -1,4 +1,4 @@
-/* slight.css |
+/* slight.css v2 |
   minimal enhancements on top of the user agent stylesheet
   provides a pleasant reading experience while relying mostly on native browser styles
   can be used as a baseline for web projects or minimal websites/blogs
@@ -7,8 +7,7 @@
 /* toc |
   1. variables
   2. typography
-  3. elements
-  4. remove max-width when printing
+  3. prose elements
 */
 
 /* 1. variables */
@@ -20,18 +19,16 @@
 	--sc-font-mono:
 		ui-monospace, "Cascadia Code", "Source Code Pro", Menlo, Consolas,
 		"DejaVu Sans Mono", monospace;
-	--sc-line-height: 1.5; /* set to 'revert' to use default */
-	--sc-max-width: 48rem; /* set to 'revert' to remove limit */
 
 	/* unsafe variables - not recommended to customize, may be removed or changed in the future */
-	--sc-emphasizebd: rgba(0, 0, 0, 0.2);
-	--sc-emphasizebg: rgba(0, 0, 0, 0.1);
+	--sc-prose-bd: rgba(0, 0, 0, 0.2);
+	--sc-prose-bg: rgba(0, 0, 0, 0.1);
 }
 
 @supports (color: light-dark(white, black)) {
 	:root {
-		--sc-emphasizebd: light-dark(rgba(0, 0, 0, 0.2), rgba(255, 255, 255, 0.2));
-		--sc-emphasizebg: light-dark(rgba(0, 0, 0, 0.1), rgba(255, 255, 255, 0.1));
+		--sc-prose-bd: light-dark(rgba(0, 0, 0, 0.2), rgba(255, 255, 255, 0.2));
+		--sc-prose-bg: light-dark(rgba(0, 0, 0, 0.1), rgba(255, 255, 255, 0.1));
 	}
 }
 
@@ -39,16 +36,22 @@
 
 html {
 	font-family: var(--sc-font);
-	line-height: var(--sc-line-height);
+	line-height: 1.5;
 	tab-size: 4;
 }
 
 body {
-	max-width: var(--sc-max-width);
+	max-width: 48rem;
 	margin-left: auto;
 	margin-right: auto;
 	padding-left: 1rem;
 	padding-right: 1rem;
+}
+
+@media print {
+	body {
+		max-width: revert;
+	}
 }
 
 code,
@@ -59,71 +62,49 @@ pre {
 	font-size: 0.9rem;
 }
 
-/* 3. elements */
+/* 3. prose elements |
+	these are built-in for beautifying articles or documentation. it improves some default elements to make them more readable
+	you can use it by applying class="prose" to a container that wraps your content, such as <main>, <body>, <div>, etc
+*/
 
-img {
+.prose img,
+.prose video,
+.prose iframe {
 	max-width: 100%;
 }
 
-table {
+.prose table {
 	border-collapse: collapse;
 }
 
-th,
-td {
-	border: 1px solid var(--sc-emphasizebd);
+.prose th,
+.prose td {
+	border: 1px solid var(--sc-prose-bd);
 	padding: 0.25rem 0.5rem;
 }
 
-thead tr,
-tbody tr:nth-child(even) {
-	background-color: var(--sc-emphasizebg);
+.prose thead tr,
+.prose tbody tr:nth-child(even) {
+	background-color: var(--sc-prose-bg);
 }
 
-:not(pre) > code,
-:not(pre) > samp,
-:not(pre) > kbd,
-pre {
-	background-color: var(--sc-emphasizebg);
+.prose :not(pre) > code,
+.prose :not(pre) > samp,
+.prose :not(pre) > kbd,
+.prose pre {
+	background-color: var(--sc-prose-bg);
 }
 
-pre {
+.prose pre {
 	overflow-x: auto;
 	max-width: 100%;
 	padding: 0.5rem;
 }
 
-blockquote {
-	border-left: 0.25rem solid var(--sc-emphasizebd);
-	background-color: var(--sc-emphasizebg);
+.prose blockquote {
+	border-left: 0.25rem solid var(--sc-prose-bd);
+	background-color: var(--sc-prose-bg);
 	padding-left: 1rem;
 	margin-left: 0;
 	margin-right: 0;
-}
-
-header nav ul,
-footer nav ul {
-	display: flex;
-	flex-wrap: wrap;
-	list-style: none;
-	padding: 0;
-}
-
-header nav ul li,
-footer nav ul li {
-	display: flex;
-}
-
-header nav ul li:not(:first-child)::before,
-footer nav ul li:not(:first-child)::before {
-	content: "•";
-	margin: 0 0.25rem;
-}
-
-/* 4. remove max-width when printing */
-
-@media print {
-	body {
-		max-width: revert;
-	}
 }

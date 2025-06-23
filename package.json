@@ -1,7 +1,7 @@
 {
 	"name": "@intergrav/slight.css",
 	"version": "1.6.4",
-	"author": "intergrav <intergrav@proton.me> (https://devins.page)",
+	"author": "intergrav <devin@devins.page> (https://devins.page)",
 	"repository": "github:intergrav/slight.css",
 	"main": "slight.css",
 	"bugs": {
@@ -16,7 +16,6 @@
 		"css",
 		"stylesheet",
 		"framework",
-		"classless",
 		"minimal",
 		"lightweight",
 		"open-source"
