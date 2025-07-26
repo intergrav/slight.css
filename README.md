@@ -13,7 +13,7 @@ this can be used as a good baseline for any web project, or as-is for a super ba
 place this somewhere in your `<head>`:
 
 ```
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@intergrav/slight.css@1">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@intergrav/slight.css@2">
 ```
 
 ### css import
@@ -21,7 +21,7 @@ place this somewhere in your `<head>`:
 place this somewhere in your stylesheet:
 
 ```
-@import url(https://cdn.jsdelivr.net/npm/@intergrav/slight.css@1);
+@import url(https://cdn.jsdelivr.net/npm/@intergrav/slight.css@2);
 ```
 
 ### npm package
