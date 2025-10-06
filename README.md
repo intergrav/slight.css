@@ -13,7 +13,7 @@ this can be used as a good baseline for any web project, or as-is for a super ba
 place this somewhere in your `<head>`:
 
 ```
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@intergrav/slight.css@2">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@intergrav/slight.css@3">
 ```
 
 ### css import
@@ -21,7 +21,7 @@ place this somewhere in your `<head>`:
 place this somewhere in your stylesheet:
 
 ```
-@import url(https://cdn.jsdelivr.net/npm/@intergrav/slight.css@2);
+@import url(https://cdn.jsdelivr.net/npm/@intergrav/slight.css@3);
 ```
 
 ### npm package
@@ -44,7 +44,7 @@ run this in your terminal, **replace with the proper command**:
    3. adds borders and padding to table elements for better spacing and clarity
    4. makes blockquotes look a bit nicer with a border and padding
 
-keep in mind that this is not a CSS reset or normalization stylesheet. it simply adds some better defaults with the aim of being as minimal as possible. if you need a normalization stylesheet, i recommend using [modern-normalize](https://github.com/sindresorhus/modern-normalize).
+keep in mind that this is not a CSS reset or normalization stylesheet. it simply adds some better defaults with the aim of being minimal. if you need a normalization stylesheet, i recommend using [modern-normalize](https://github.com/sindresorhus/modern-normalize).
 
 ## prose elements
 
