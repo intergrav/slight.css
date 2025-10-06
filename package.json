@@ -23,5 +23,8 @@
 	"license": "MIT",
 	"prettier": {
 		"useTabs": true
+	},
+	"devDependencies": {
+		"prettier": "^3.6.2"
 	}
 }

@@ -1,51 +1,78 @@
-/* slight.css v2 |
-  minimal enhancements on top of the user agent stylesheet
-  provides a pleasant reading experience while relying mostly on native browser styles
-  can be used as a baseline for web projects or minimal websites/blogs
+/* slight.css v3 |
+	a very minimal, accessible, mostly classless CSS framework aiming to 
+	rely on user agent styles. makes any basic html page look better, and
+	also provides some variables that you can customize to fit your needs.
+	it's meant to be extended on with your own CSS as you see fit.
+
+	- automatic light/dark mode with color scheme
+	- minimal styling, entirely customizable through CSS variables
+	- optional, customizable prose styles for articles and documentation
+		- use by applying class="prose" to a container that wraps your
+		  content, such as <main>, <body>, <div>, etc
 */
 
 /* toc |
-  1. variables
-  2. typography
-  3. prose elements
+	1. variables
+	2. typography
+	3. prose elements
 */
 
-/* 1. variables */
+/* 1. variables |
+	- feel free to customize these variables by applying your own CSS file
+	after this one, and setting them in `:root`.
+	- you can set any of these to "revert" to revert customization. old browsers
+	won't recognize it so they will use the default values anyway.
+*/
 
 :root {
-	/* customizable variables - you may change these as you wish */
 	color-scheme: light dark;
-	--sc-font: system-ui, sans-serif;
-	--sc-font-mono:
-		ui-monospace, "Cascadia Code", "Source Code Pro", Menlo, Consolas,
-		"DejaVu Sans Mono", monospace;
 
-	/* unsafe variables - not recommended to customize, may be removed or changed in the future */
-	--sc-prose-bd: rgba(0, 0, 0, 0.2);
-	--sc-prose-bg: rgba(0, 0, 0, 0.1);
+	--sc_typography_font-serif: ui-serif, serif;
+	--sc_typography_font-sans_serif: ui-sans-serif, system-ui, sans-serif;
+	--sc_typography_font-mono: ui-monospace, monospace;
+	--sc_typography_line-height: 1.5;
+	--sc_typography_tab-size: 4;
+	--sc_typography_body_max-width: 48rem;
+	--sc_typography_body_margin-inline: auto;
+	--sc_typography_body_padding-inline: 1rem;
+
+	--sc_prose_background-color: rgba(0, 0, 0, 0.1);
+	--sc_prose_border-color: rgba(0, 0, 0, 0.2);
+	--sc_prose_border-radius: 0.25rem;
 }
 
-@supports (color: light-dark(white, black)) {
+@media (prefers-color-scheme: dark) {
 	:root {
-		--sc-prose-bd: light-dark(rgba(0, 0, 0, 0.2), rgba(255, 255, 255, 0.2));
-		--sc-prose-bg: light-dark(rgba(0, 0, 0, 0.1), rgba(255, 255, 255, 0.1));
+		--sc_prose_background-color: rgba(255, 255, 255, 0.1);
+		--sc_prose_border-color: rgba(255, 255, 255, 0.2);
 	}
 }
 
 /* 2. typography */
 
 html {
-	font-family: var(--sc-font);
-	line-height: 1.5;
-	tab-size: 4;
+	font-family: var(--sc_typography_font-sans_serif);
+	line-height: var(--sc_typography_line-height);
+	tab-size: var(--sc_typography_tab-size);
 }
 
 body {
-	max-width: 48rem;
-	margin-left: auto;
-	margin-right: auto;
-	padding-left: 1rem;
-	padding-right: 1rem;
+	max-width: var(--sc_typography_body_max-width);
+	margin-inline: var(--sc_typography_body_margin-inline);
+	padding-inline: var(--sc_typography_body_padding-inline);
+}
+
+code,
+kbd,
+samp,
+pre {
+	font-family: var(--sc_typography_font-mono);
+}
+
+img,
+video,
+iframe {
+	max-width: 100%;
 }
 
 @media print {
@@ -54,45 +81,33 @@ body {
 	}
 }
 
-code,
-kbd,
-samp,
-pre {
-	font-family: var(--sc-font-mono);
-	font-size: 0.9rem;
-}
-
 /* 3. prose elements |
 	these are built-in for beautifying articles or documentation. it improves some default elements to make them more readable
 	you can use it by applying class="prose" to a container that wraps your content, such as <main>, <body>, <div>, etc
 */
 
-.prose img,
-.prose video,
-.prose iframe {
-	max-width: 100%;
-}
-
 .prose table {
+	border: 1px solid var(--sc_prose_border-color);
 	border-collapse: collapse;
 }
 
 .prose th,
 .prose td {
-	border: 1px solid var(--sc-prose-bd);
-	padding: 0.25rem 0.5rem;
+	padding-block: 0.25rem;
+	padding-inline: 0.5rem;
 }
 
 .prose thead tr,
 .prose tbody tr:nth-child(even) {
-	background-color: var(--sc-prose-bg);
+	background-color: var(--sc_prose_background-color);
 }
 
 .prose :not(pre) > code,
 .prose :not(pre) > samp,
 .prose :not(pre) > kbd,
 .prose pre {
-	background-color: var(--sc-prose-bg);
+	border-radius: var(--sc_prose_border-radius);
+	background-color: var(--sc_prose_background-color);
 }
 
 .prose pre {
@@ -102,9 +117,9 @@ pre {
 }
 
 .prose blockquote {
-	border-left: 0.25rem solid var(--sc-prose-bd);
-	background-color: var(--sc-prose-bg);
-	padding-left: 1rem;
-	margin-left: 0;
-	margin-right: 0;
+	border-inline-start: 0.25rem solid var(--sc_prose_border-color);
+	border-radius: var(--sc_prose_border-radius);
+	background-color: var(--sc_prose_background-color);
+	padding-inline-start: 1rem;
+	margin-inline: 0;
 }
