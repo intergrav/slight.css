@@ -1,3 +1,7 @@
+> # This repository has been moved!
+> 
+> See this repository on [Tangled](https://tangled.org): https://tangled.org/devins.page/slight.css
+
 # slight.css
 
 **slight.css** is an incredibly simple CSS stylesheet that adds some _slight_ enhancements on top of the default user agent stylesheet.
